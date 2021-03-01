@@ -130,7 +130,8 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILE_DIRS = [
-      "static/images", 
+      "static/images",
+      "static/food" 
       "static/css", 
       "staticfiles",]
 
