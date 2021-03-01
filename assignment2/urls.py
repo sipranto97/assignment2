@@ -23,6 +23,6 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('food/',include('food.urls')),
+    path('',include('food.urls')),
     
 ]
