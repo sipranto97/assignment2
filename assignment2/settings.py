@@ -29,7 +29,9 @@ SECRET_KEY = '@&hbdfma)b^e+-w1pbcfz_v%q$2*xtdoj@oh2@ag4$lpc28$7a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['foodmenubd.herokuapp.com']
+ALLOWED_HOSTS = ['*','foodmenubd.herokuapp.com',
+                'https://foodmenubd.herokuapp.com/',
+                'foodmenubd.herokuapp.com/',]
 
 
 # Application definition
