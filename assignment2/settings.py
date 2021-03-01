@@ -29,9 +29,7 @@ SECRET_KEY = '@&hbdfma)b^e+-w1pbcfz_v%q$2*xtdoj@oh2@ag4$lpc28$7a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*','foodmenubd.herokuapp.com',
-                'https://foodmenubd.herokuapp.com/',
-                'foodmenubd.herokuapp.com/',]
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
 
 
 # Application definition
@@ -84,8 +82,8 @@ WSGI_APPLICATION = 'assignment2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
+        
     }
 }
 
@@ -128,22 +126,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILE_DIRS = [
-      "static/images",
-      "static/food" 
-      "static/css", 
-      "staticfiles",]
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-if os.getcwd() == '/app':
-    import dj_database_url
-    db_from_env = dj_database_url.config(conn_max_age=500)
-    DATABASES['default'].update(db_from_env)
-
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    ALLOWED_HOSTS = ['foodmenubd.herokuapp.com']
-    DEBUG = True
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
